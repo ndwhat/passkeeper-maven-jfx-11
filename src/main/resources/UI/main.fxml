@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane minHeight="600.0" minWidth="750.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stendyx.passkeeper.passkeeper.controllers.MainController">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="1.7976931348623157E308" percentWidth="60.0" />
+      <ColumnConstraints maxWidth="1.7976931348623157E308" percentWidth="0.0" />
+      <ColumnConstraints fillWidth="false" halignment="RIGHT" percentWidth="40.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <items>
+            <TextField fx:id="categoryTextField" onKeyTyped="#handlerOnTypedCategory" />
+                  <Button fx:id="addCategoryButton" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#handlerAddCategory" text="Add Category" />
+         </items>
+      </ToolBar>
+      <ToolBar maxHeight="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.columnSpan="2">
+         <items>
+            <Label fx:id="successAddCategoryLabel" />
+         </items></ToolBar>
+      <Pane minHeight="80.0" GridPane.columnIndex="2">
+         <children>
+                  <GridPane alignment="CENTER_RIGHT" minHeight="70.0" nodeOrientation="LEFT_TO_RIGHT">
+                      <columnConstraints>
+                          <ColumnConstraints maxWidth="1.7976931348623157E308" />
+                          <ColumnConstraints />
+                      </columnConstraints>
+                      <rowConstraints>
+                          <RowConstraints />
+                          <RowConstraints />
+                          <RowConstraints />
+                      </rowConstraints>
+                      <children>
+                          <Label fx:id="name">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                          </Label>
+                          <Hyperlink onAction="#handleSettings" text="Settings" GridPane.columnIndex="1" />
+                          <Hyperlink onAction="#handleReenter" text="Re-enter" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                          <Hyperlink onAction="#handleExit" text="Exit" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                      </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+                  </GridPane>
+         </children>
+         <padding>
+            <Insets right="25.0" />
+         </padding>
+      </Pane>
+      <TabPane fx:id="tabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
+        <tabs>
+
+        </tabs>
+      </TabPane>
+   </children>
+</GridPane>

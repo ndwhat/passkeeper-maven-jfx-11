@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stendyx.passkeeper.passkeeper.controllers.LoginController">
+    <padding>
+        <Insets bottom="10" left="25" right="25" top="25" />
+    </padding>
+    <Text id="welcome-text" text="Authorize" GridPane.columnSpan="2" />
+
+    <Label text="Password" GridPane.rowIndex="3" />
+
+    <TextField fx:id="loginField" onKeyTyped="#handleType" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <PasswordField fx:id="passwordField" onKeyTyped="#handleType" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+
+    <Label fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <Label layoutX="37.0" layoutY="134.0" text="Login" GridPane.rowIndex="2" />
+
+
+    <HBox alignment="bottom_right" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <Hyperlink onAction="#handleRegister" text="Register" />
+
+        <Hyperlink text="Forget password" />
+    </HBox>
+
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <Button fx:id="submit" disable="true" onAction="#handleSubmitButtonAction" text="Sign in" />
+    </HBox>
+
+
+    <stylesheets>
+        <URL value="@../style/application.css" />
+    </stylesheets>
+    <columnConstraints>
+        <ColumnConstraints minWidth="50.0" />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="18.0" minHeight="11.0" prefHeight="12.0" />
+        <RowConstraints maxHeight="35.0" minHeight="8.0" prefHeight="10.0" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints />
+        <RowConstraints />
+
+    </rowConstraints>
+</GridPane>
